@@ -5,8 +5,8 @@
 
 import boto3
 
-Topic_Arn = 'arn:aws:sns:us-east-2:655824777623:lambda_functions'
-account = "AWS Enterprise SandBox"
+Topic_Arn = ''
+account = ""
 
 def lambda_handler(object, context):
     # Get list of regions
@@ -28,7 +28,7 @@ def lambda_handler(object, context):
         # print("Running instance : %s" % instance.id)
 
         # Get instances with filter of running + with valid AMI-ids
-        compliant_instances = ec2.instances.filter(Filters=[{'Name': 'image-id', 'Values': ['ami-0d8f6eb4f641ef691']},
+        compliant_instances = ec2.instances.filter(Filters=[{'Name': 'image-id', 'Values': ['']},
                                                             {'Name': 'instance-state-name', 'Values': ['running']}])
 
         for instance in compliant_instances:
