@@ -4,8 +4,8 @@
 
 import boto3
 
-Topic_Arn = 'arn:aws:sns:us-east-2:655824777623:lambda_functions'
-account = "AWS Enterprise SandBox"
+Topic_Arn = ''
+account = ""
 
 # Set the global variables
 globalVars  = {}
